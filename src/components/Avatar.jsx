@@ -7,16 +7,15 @@ import React, { useEffect, useRef } from "react";
 import { useGraph } from '@react-three/fiber'
 import { useAnimations, useFBX, useGLTF } from "@react-three/drei";
 import { SkeletonUtils } from 'three-stdlib'
-import * as THREE from "three";
 
 
 export function Avatar(props) {
   const group = useRef();
-  const { scene } = useGLTF('models/BackupMan.glb');
-  const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
+  const { scene } = useGLTF('models/man_test1.glb');
+  const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
   const { nodes, materials } = useGraph(clone);
 
-  const {animations: typingAnimation} = useFBX("animations/Typing.fbx");  
+  const {animations: typingAnimation} = useFBX("animations/Typing_1.fbx");  
   console.log(typingAnimation);
 
   typingAnimation[0].name = "Typing";
@@ -29,21 +28,18 @@ export function Avatar(props) {
 
   return (
     <group {...props} ref={group} dispose={null}>
-    <group rotation-x={-Math.PI / 2}>
       <group scale={2.174}>
         <primitive object={nodes.spine} />
-        <primitive object={nodes.neutral_bone} />
-        <skinnedMesh geometry={nodes.Cube048.geometry} material={materials['Material.005']} skeleton={nodes.Cube048.skeleton} />
-        <skinnedMesh geometry={nodes.Cube048_1.geometry} material={materials['Material.007']} skeleton={nodes.Cube048_1.skeleton} />
-        <skinnedMesh geometry={nodes.Cube048_2.geometry} material={materials['Material.008']} skeleton={nodes.Cube048_2.skeleton} />
-        <skinnedMesh geometry={nodes.Cube048_3.geometry} material={materials['Material.001']} skeleton={nodes.Cube048_3.skeleton} />
-        <skinnedMesh geometry={nodes.Cube048_4.geometry} material={materials['Material.003']} skeleton={nodes.Cube048_4.skeleton} />
-        <skinnedMesh geometry={nodes.Cube048_5.geometry} material={materials['Material.002']} skeleton={nodes.Cube048_5.skeleton} />
-        <skinnedMesh geometry={nodes.Cube048_6.geometry} material={materials['Material.004']} skeleton={nodes.Cube048_6.skeleton} />
+        <skinnedMesh geometry={nodes.Cube061.geometry} material={materials['Material.010']} skeleton={nodes.Cube061.skeleton} />
+        <skinnedMesh geometry={nodes.Cube061_1.geometry} material={materials['Material.013']} skeleton={nodes.Cube061_1.skeleton} />
+        <skinnedMesh geometry={nodes.Cube061_2.geometry} material={materials['Material.006']} skeleton={nodes.Cube061_2.skeleton} />
+        <skinnedMesh geometry={nodes.Cube061_3.geometry} material={materials['Material.009']} skeleton={nodes.Cube061_3.skeleton} />
+        <skinnedMesh geometry={nodes.Cube061_4.geometry} material={materials['Material.011']} skeleton={nodes.Cube061_4.skeleton} />
+        <skinnedMesh geometry={nodes.Cube061_5.geometry} material={materials['Material.012']} skeleton={nodes.Cube061_5.skeleton} />
+        <skinnedMesh geometry={nodes.Cube061_6.geometry} material={materials['Material.004']} skeleton={nodes.Cube061_6.skeleton} />
       </group>
-    </group>  
     </group>
   )
 }
 
-useGLTF.preload('models/BackupMan.glb')
+useGLTF.preload('models/man_test1.glb')
