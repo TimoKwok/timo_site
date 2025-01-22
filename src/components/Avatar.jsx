@@ -13,9 +13,6 @@ import * as THREE from "three";
 
 export function Avatar(props) {
   const group = useRef();
-  const { cursorFollow} = useControls({
-    cursorFollow: false,
-  });
   const { scene } = useGLTF('models/man_test1.glb');
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
   const { nodes, materials } = useGraph(clone);
@@ -26,13 +23,6 @@ export function Avatar(props) {
   const { actions } = useAnimations(typingAnimation, group);
 
 
-  useFrame((state) => {
-    if (cursorFollow) {
-        const target = new THREE.Vector3(state.mouse.x, state.mouse.y, state.mouse.z);
-        group.current.getObjectByName("spine004").lookAt(target);
-    }
-  });
-
   useEffect(() => {
     actions["Typing"].reset().play()
   }, []);
@@ -40,8 +30,6 @@ export function Avatar(props) {
 
   return (
     <group {...props} ref={group} dispose={null}>
-        <group rotation-x={-Math.PI / 1.5}>
-      <group scale={2.174}>
         <primitive object={nodes.spine} />
         <skinnedMesh geometry={nodes.Cube061.geometry} material={materials['Material.010']} skeleton={nodes.Cube061.skeleton} />
         <skinnedMesh geometry={nodes.Cube061_1.geometry} material={materials['Material.013']} skeleton={nodes.Cube061_1.skeleton} />
@@ -51,8 +39,6 @@ export function Avatar(props) {
         <skinnedMesh geometry={nodes.Cube061_5.geometry} material={materials['Material.012']} skeleton={nodes.Cube061_5.skeleton} />
         <skinnedMesh geometry={nodes.Cube061_6.geometry} material={materials['Material.004']} skeleton={nodes.Cube061_6.skeleton} />
       </group>
-      </group>
-    </group>
   )
 }
 

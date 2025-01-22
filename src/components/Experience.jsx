@@ -5,6 +5,7 @@ import { Waver } from "./Waver";
 export const Experience = () => {
   return (
     <>
+      <OrbitControls/>
       <group position={[-2,0,2]}>
         <Avatar />
       </group>
