@@ -18,7 +18,7 @@ export const About = () => {
 
             <div className="max-w-2xl ml-32 mx-auto mb-5">
                 <p className="text-2xl font-generalsans text-black font-medium italic mb-4">
-                    I'ts Nice To Finally Meet You
+                    I'ts Nice To Finally Meet You!
                 </p>
                 <blockquote className="leading-relaxed border-black border-l-4 pl-4 text-left text-black font-medium">
                     <p className='mb-4'>

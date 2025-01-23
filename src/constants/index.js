@@ -1,12 +1,14 @@
 export const myProjects = [
     {
         title: 'Uncle Iroh Discord Bot',
-        desc: 'Even before my first year of univeristy, I decided to make ',
-        href: 'https://github.com/TimoKwok/Uncle-Iroh-Bot'
+        desc: 'Designed a Discord Bot in Java and Python, debugging over 20 issues in my code, improving my ability to design and debug computer applications. Administered user commands to allow the bot to respond to yes or no questions, mention other users, send images, and clear messages, increasing user engagement on the server.',
+        href: 'https://github.com/TimoKwok/Uncle-Iroh-Bot',
+        logo: 'src/assets/project_logo1.jpeg'
     },
     {
         title: 'Cooking website',
-        desc: 'blah blah blah blah',
-        href: 'https://github.com/TimoKwok/Web-Dev-Version1'
+        desc: 'I made a cooking website and its great and you should check it out its great',
+        href: 'https://github.com/TimoKwok/Web-Dev-Version1',
+        logo: 'src/assets/project_logo2.png'
     }
 ]
