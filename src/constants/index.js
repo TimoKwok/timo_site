@@ -6,9 +6,15 @@ export const myProjects = [
         logo: 'src/assets/project_logo1.jpeg'
     },
     {
-        title: 'Cooking website',
-        desc: 'I made a cooking website and its great and you should check it out its great',
+        title: 'The Food Finder',
+        desc: 'I made a cooking website and its great and you should check it out its great After my first year of university I sought out new challenges, and I created a cooking website using Java, HTML, React, CSS and a free recipe API (TheMealDB). The website can load pages in seconds with text, images, and the correct linking to recipes and videos from the API. I designed the website to be as user friendly and uncluttered as possible, and I continue to build upon my understanding of UX to see what else I can do to improve its look.',
         href: 'https://github.com/TimoKwok/Web-Dev-Version1',
         logo: 'src/assets/project_logo2.png'
+    },
+    {
+        title: 'Task Master App',
+        desc: 'I made an elixir app that manages tasks, lets you do stuff',
+        href: 'https://github.com/TimoKwok/Web-Dev-Version1',
+        logo: 'src/assets/project_logo3.png'
     }
 ]

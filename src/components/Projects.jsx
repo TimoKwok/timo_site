@@ -18,7 +18,7 @@ export const Projects = () => {
                 return prevIndex === 0 ? projectCount - 1 : prevIndex - 1;
             }
             else {
-                return prevIndex === projectCount - 1 ? 0: prevIndex + 1
+                return prevIndex === projectCount - 1 ? 0: prevIndex + 1;
             }
         })
     }
@@ -68,13 +68,15 @@ export const Projects = () => {
 
 
     return (
-        <section className='bg-black'>
+        <section className='min-h-screen flex flex-col relative'>
             <div className='hero_tag text-white'>
-            My Projects
+                My Projects
             </div>
-            <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
-                <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
-                    <div className="absolute top-0 right">
+
+
+            <div className="max-w-2xl mt-12 gap-5 w-full">
+                <div className="flex flex-col gap-5 relative sm:p-10 px-5 shadow-2xl shadow-black-200">
+                    <div className="absolute top-0 ">
                         <div className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg">
                             <img src={currentProject.logo} alt="logo" className="w-20 h-20 shadow-sm rounded-lg"/>
                         </div>
@@ -87,36 +89,34 @@ export const Projects = () => {
                                 {currentProject.desc}
                             </p>
                         </div>
-
-
-                        <div className="flex justify-between items-center mt-7">
-                            <button className="arrow-btn" onClick={() => handleNavigation('previous')}>
-                                <img src="src/assets/red-right-arrow.png" className='w-4 h-4'/>
-                            </button>
-                            <button className="arrow-btn" onClick={() => handleNavigation('next')}>
-                                <img src="src/assets/red-right-arrow.png" className='w-4 h-4'/>
-                            </button>
-                        </div>
-
-
-
-                    </div>
+                    </div>   
+                            
                 </div>
+                
             </div>
 
-            <div >
-            <Leva/>
-            <Canvas className='w-full h-full'>
-            <perspectiveCamera position={[-2,0,0]}>
-            <directionalLight intensity={4} position={[-9,0,4]} color={"#f7e1ba"}/>
-            <Avatar
-                 rotation={[x.rotationX, x.rotationY, x.rotationZ]}
-                 scale={[x.scale, x.scale, x.scale]}
-                 position={[x.positionX, x.positionY, x.positionZ]}
-            />
-            </perspectiveCamera>
-            </Canvas>
+
+
+                <div className="max-w-2xl mt-72 flex justify-between ml-4">
+                <button className="arrow-btn" onClick={() => handleNavigation("previous")}>
+                    <img
+                    src="src/assets/left_arrow.png"
+                    className="w-4 h-4"
+                    />
+                </button>
+                <button className="arrow-btn" onClick={() => handleNavigation("next")}>
+                    <img
+                    src="src/assets/right_arrow.png"
+                    className="w-4 h-4"
+                    />
+                </button>  
+                </div>    
+            
+            <div className="flex justify-center items-center left-0">
+                <div className="w-3/4 h-64 bg-pink-500 rounded-2xl"></div>
             </div>
+
         </section>
+
     )
 }
