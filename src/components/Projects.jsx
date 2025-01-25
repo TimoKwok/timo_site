@@ -68,55 +68,69 @@ export const Projects = () => {
 
 
     return (
-        <section className='min-h-screen flex flex-col relative'>
+        <section className="h-[90vh] w-full flex flex-col relative">
             <div className='hero_tag text-white'>
                 My Projects
             </div>
 
-
-            <div className="max-w-2xl mt-12 gap-5 w-full">
-                <div className="flex flex-col gap-5 relative sm:p-10 px-5 shadow-2xl shadow-black-200">
-                    <div className="absolute top-0 ">
-                        <div className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg">
-                            <img src={currentProject.logo} alt="logo" className="w-20 h-20 shadow-sm rounded-lg"/>
-                        </div>
-
-                        <div className="flex flex-col gap-5 text-white-600 my-1">
-                            <p className="text-white text-2xl font-semibold animatedText">
-                                {currentProject.title}
-                            </p>
-                            <p className="animatedText">
-                                {currentProject.desc}
-                            </p>
-                        </div>
-                    </div>   
-                            
-                </div>
+            {/* project logo + title + description */}
+            <div className='flex flex-col sm:flex-row items-start justify-between gap-8 sm:gap-16'>
                 
+                
+                {/* title + description */}
+                <div key={selectedProjectIndex} className="max-w-2xl ml-6 animate-fadeIn">
+                    <div className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg sm:mx-0">
+                            <img
+                                src={currentProject.logo}
+                                alt="logo"
+                                className="ml-4 w-24 h-24 shadow-md rounded-lg"
+                            />
+                    </div>
+                    <div className='flex flex-col gap-5 text-white-600 my-1'>
+                    <h2 className=" text-3xl font-semibold mb-4">
+                        {currentProject.title}
+                    </h2>
+                    <p className=" text-lg text-gray-300 ">
+                        {currentProject.desc}
+                    </p>
+                    </div>
+                </div>
+
+                {/* Navigation buttons */}
+                <div className="bottom z-20 absolute bottom-8 left-20 gap-96 flex justify-center space-x-4">
+                    <button className="arrow-btn" onClick={() => handleNavigation("previous")}>
+                        <img
+                        src="src/assets/left_arrow.png"
+                        className="w-4 h-4"
+                        />
+                    </button>
+                    <button className="arrow-btn" onClick={() => handleNavigation("next")}>
+                        <img
+                        src="src/assets/right_arrow.png"
+                        className="w-4 h-4"
+                        />
+                    </button>  
+                </div>   
+
+
+                {/* avatar canvas */}
+                <div className="w-full h-full absolute inset-0">
+                    <Leva/>
+                        <Canvas className='w-full h-full'>
+                            <perspectiveCamera position={[0,0,-4]} aspect={window.innerWidth / window.innerHeight} fov={75} near={0.1} far={1000}>
+                                <ambientLight intensity={3.7} color={"#ffdb9c"}/>
+                                <directionalLight intensity={6} position={[-9,0,4]} color={"#f7e1ba"}/>
+                                <Avatar
+                                    rotation={[x.rotationX, x.rotationY, x.rotationZ]}
+                                    scale={[x.scale, x.scale, x.scale]}
+                                    position={[x.positionX, x.positionY, x.positionZ]}
+                                />
+                            </perspectiveCamera>
+                        </Canvas>
+                </div>
+
+
             </div>
-
-
-
-                <div className="max-w-2xl mt-72 flex justify-between ml-4">
-                <button className="arrow-btn" onClick={() => handleNavigation("previous")}>
-                    <img
-                    src="src/assets/left_arrow.png"
-                    className="w-4 h-4"
-                    />
-                </button>
-                <button className="arrow-btn" onClick={() => handleNavigation("next")}>
-                    <img
-                    src="src/assets/right_arrow.png"
-                    className="w-4 h-4"
-                    />
-                </button>  
-                </div>    
-            
-            <div className="flex justify-center items-center left-0">
-                <div className="w-3/4 h-64 bg-pink-500 rounded-2xl"></div>
-            </div>
-
         </section>
-
     )
 }

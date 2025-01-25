@@ -2,12 +2,13 @@ import React from 'react'
 
 export const About = () => {
     return (
-        <section className='bg-white'>
+        <section className='min-h-screen w-full flex flex-col relative bg-white'>
             <div className='hero_tag text-black'>
             All About Me
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-between">
+
                 <div className="h-auto max-w-lg flex-shrink-0 sm:mr-6">
                     <img 
                         src="src/assets/pfp1.jpg" 

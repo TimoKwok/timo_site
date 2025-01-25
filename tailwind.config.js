@@ -3,6 +3,31 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      keyframes: {
+        fadeIn: {
+          '0%': {opacity: '0'},
+          '100%': {opacity: '1'}
+        },
+        slidein: {
+          from: {
+            opacity: "0",
+            transform: "translateY(-10px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+      },
+      animation: {
+        slidein: "slidein 1s ease 300ms",
+        fadeIn: 'fadeIn 0.55s ease-in'
+      },
+
+
+
+
+
       fontFamily: {
         generalsans: ['General Sans', 'sans-serif'],
       },
@@ -26,6 +51,7 @@ export default {
       backgroundImage: {
         terminal: "url('/assets/terminal.png')",
       },
+
     },
   },
   plugins: [],
