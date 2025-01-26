@@ -13,7 +13,7 @@ import * as THREE from "three";
 export function Waver(props) {
   const group = useRef();
   const { cursorFollow} = useControls({
-    cursorFollow: false,
+    cursorFollow: true,
   });
   const { scene } = useGLTF('models/man_test2.glb');
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);

@@ -118,8 +118,8 @@ export const Projects = () => {
                     <Leva/>
                         <Canvas className='w-full h-full'>
                             <perspectiveCamera position={[0,0,-4]} aspect={window.innerWidth / window.innerHeight} fov={75} near={0.1} far={1000}>
-                                <ambientLight intensity={3.7} color={"#ffdb9c"}/>
-                                <directionalLight intensity={6} position={[-9,0,4]} color={"#f7e1ba"}/>
+                                <ambientLight intensity={5} color={"#ffdb9c"}/>
+                                <directionalLight intensity={4} position={[-18,8,-6]} color={"#fffff"}/>
                                 <Avatar
                                     rotation={[x.rotationX, x.rotationY, x.rotationZ]}
                                     scale={[x.scale, x.scale, x.scale]}
@@ -129,6 +129,16 @@ export const Projects = () => {
                         </Canvas>
                 </div>
 
+
+                <div className='rounded-lg shadow-xl dark:shadow-gray-600 mr-8'>
+                <div className='p-3 backdrop-filter w-fit rounded-lg sm:mx-0 '>
+                    <img
+                        src={currentProject.image}
+                        alt="logo"
+                        className="w-128 h-96 rounded-lg object-cover"
+                    />
+                </div>
+                </div>
 
             </div>
         </section>

@@ -7,11 +7,11 @@ export const NavBar = () => {
                     <a href="/" className="text-neutral-400 font-bold text-xl hover:text-white transition-colors">
                         Timothy Nolan Kwok
                     </a>
-                    <div className="flex space-x-20"> {/* Add flex and spacing here */}
-                        <button onClick={() => window.open("https://github.com/TimoKwok", "_blank")} className="w-6 h-6 text-neutral-400 font-bold text-xl hover:text-white transition-colors">
+                    <div className="flex space-x-24"> {/* Add flex and spacing here */}
+                        <button onClick={() => window.open("https://github.com/TimoKwok", "_blank")} className="w-6 h-6 mr-2 text-neutral-400 font-bold text-xl hover:text-white transition-colors">
                             GitHub
                         </button>
-                        <button onClick={() => window.open("https://www.linkedin.com/in/timo-kwok/", "_blank")} className="w-6 h-6 text-neutral-400 font-bold text-xl hover:text-white transition-colors">
+                        <button onClick={() => window.open("https://www.linkedin.com/in/timo-kwok/", "_blank")} className="absolute w-6 h-6 text-neutral-400 font-bold text-xl hover:text-white transition-colors">
                             Linkedin
                         </button>
                     </div>

@@ -52,6 +52,16 @@ export default {
         terminal: "url('/assets/terminal.png')",
       },
 
+
+      width: {
+        '128': '32rem', // 512px
+        '160': '40rem', // 640px
+      },
+      height: {
+        '128': '32rem', // 512px
+        '160': '40rem', // 640px
+      },
+
     },
   },
   plugins: [],
