@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Avatar } from './Avatar'
+import { Laptop } from './Laptop'
 import { Leva, useControls } from 'leva'
 import { Canvas } from "@react-three/fiber";
 import { myProjects } from '../constants';
@@ -63,6 +64,45 @@ export const Projects = () => {
 
         })
 
+    const y = useControls('Laptop', 
+        {
+            rotationX: {
+                value: 2.5,
+                min: -10,
+                max: 10
+            },
+            rotationY: {
+                value: 2.5,
+                min: -10,
+                max: 10
+            },
+            rotationZ: {
+                value: 2.5,
+                min: -10,
+                max: 10
+            },
+            scale: {
+                value: 0.1,
+                min: -10,
+                max: 10
+            },
+            positionX: {
+                value: 2.5,
+                min: -10,
+                max: 10
+            },
+            positionY: {
+                value: 2.5,
+                min: -10,
+                max: 10
+            },
+            positionZ: {
+                value: 2.5,
+                min: -10,
+                max: 10
+            },
+
+        })
 
 
 
@@ -117,13 +157,18 @@ export const Projects = () => {
                 <div className="w-full h-full absolute inset-0">
                     <Leva/>
                         <Canvas className='w-full h-full'>
-                            <perspectiveCamera position={[0,0,-4]} aspect={window.innerWidth / window.innerHeight} fov={75} near={0.1} far={1000}>
-                                <ambientLight intensity={5} color={"#ffdb9c"}/>
-                                <directionalLight intensity={4} position={[-18,8,-6]} color={"#fffff"}/>
+                            <perspectiveCamera position={[0,0,-4]} aspect={window.innerWidth / window.innerHeight}  near={0.1} far={1000}>
+                                <ambientLight intensity={5} color={"#e6e8ff"}/>
+                                <directionalLight intensity={5} position={[-10,0,-2]} color={"#fff6d6"}/>
                                 <Avatar
                                     rotation={[x.rotationX, x.rotationY, x.rotationZ]}
                                     scale={[x.scale, x.scale, x.scale]}
                                     position={[x.positionX, x.positionY, x.positionZ]}
+                                />
+                                <Laptop
+                                    rotation={[y.rotationX, y.rotationY, y.rotationZ]}
+                                    scale={[y.scale, y.scale, y.scale]}
+                                    position={[y.positionX, y.positionY, y.positionZ]}
                                 />
                             </perspectiveCamera>
                         </Canvas>

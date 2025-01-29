@@ -73,11 +73,11 @@ export const Hero = () => {
             <Leva/>
                 <Canvas className='w-full h-full'>
                     <perspectiveCamera position={[0,0,-4]} aspect={window.innerWidth / window.innerHeight} fov={75} near={0.1} far={1000}>
-                        <ambientLight intensity={2} color={"#ff94b6"}/>
+                        <ambientLight intensity={3} color={"#bec2e8"}/>
                         <directionalLight 
-                            intensity={9} 
-                            position={[x.positionX,x.positionY,x.positionZ]} 
-                            color={"#bfdff5"}
+                            intensity={8} 
+                            position={[1.3,10,10]} 
+                            color={"#fff6d6"}
                         />
                         <Waver 
                             rotation={[7.9, 3.3, 2.1]}
