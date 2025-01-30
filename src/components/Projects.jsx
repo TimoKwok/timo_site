@@ -140,13 +140,13 @@ export const Projects = () => {
                 <div className="bottom z-20 absolute bottom-8 left-20 gap-96 flex justify-center space-x-4">
                     <button className="arrow-btn" onClick={() => handleNavigation("previous")}>
                         <img
-                        src="src/assets/left_arrow.png"
+                        src="/assets/left_arrow.png"
                         className="w-4 h-4"
                         />
                     </button>
                     <button className="arrow-btn" onClick={() => handleNavigation("next")}>
                         <img
-                        src="src/assets/right_arrow.png"
+                        src="/assets/right_arrow.png"
                         className="w-4 h-4"
                         />
                     </button>  

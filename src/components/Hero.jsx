@@ -58,7 +58,7 @@ export const Hero = () => {
                 <p className="animate-slidein font-medium text-2xl  font-generalsans text-white text-center">
                     Timothy.kwok@torontomu.ca | Toronto, ON. | Computer Science Student
                 </p>
-                <img className="animate-slidein mb-3 ml-2 h-auto max-w-lg shadow-xl dark:shadow-gray-800 rounded-full w-64 h-64" src='src/assets/Githubpfp.png'/>
+                <img className="animate-slidein mb-3 ml-2 h-auto max-w-lg shadow-xl dark:shadow-gray-800 rounded-full w-64 h-64" src='/assets/Githubpfp.png'/>
                 <blockquote className="animate-slidein z-(-6) mb-1 ml-4 w-full z-10 px-4 sm:px-8 max-w-4xl text-white font-medium text-lg sm:text-xl leading-relaxed border-l-4 border-gray-400 pl-4 italic">
                     "Hey there, how's it going? I'm Timo and I'm really glad you stopped by, here you can learn more about me, view some of my projects, passions, past experiences, and get into contact with me! It's nice to finally meet you!"
                 </blockquote>

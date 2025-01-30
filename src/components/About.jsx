@@ -11,7 +11,7 @@ export const About = () => {
 
                 <div className="h-auto mb-4 max-w-lg flex-shrink-0 sm:mr-6">
                     <img 
-                        src="src/assets/pfp1.jpg" 
+                        src="/assets/pfp1.jpg" 
                         alt="Timo's Profile Picture"
                         className="rounded-full w-82 ml-16" 
                     />
