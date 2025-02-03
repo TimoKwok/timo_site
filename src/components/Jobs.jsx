@@ -3,9 +3,9 @@ import bgImage from "/assets/Webbackground2.png"; // Import the image
 
 export const Jobs = () => {
     return (
-        <section className="h-[90vh] w-full flex flex-col relative bg-white p-8" style={{ backgroundImage: `url(${bgImage})` }}>
+        <section className="h-[100vh] w-full flex flex-col relative bg-white p-8" style={{ backgroundImage: `url(${bgImage})` }}>
             {/* Section Title */}
-            <div className="hero_tag text-black text-2xl font-bold mb-6">
+            <div className="hero_tag text-black text-2xl font-bold mb-6 underline">
                 Professional Experience
             </div>
 
@@ -35,7 +35,7 @@ export const Jobs = () => {
                     </h>
                     <blockquote className="mt-2 leading-relaxed border-black border-l-4 pl-4 text-left text-black font-medium">
                         <p className="mb-4">
-                            On a professional level, I’ve also gained valuable, hands-on experience for software development practices after my time at theScore. I worked as a QA analyst for the promotions team, where I got the chance to test and find bugs for their upcoming features. I participated in daily standups, created concise testing notes, filed bugs, and made lasting connections with some amazing people! 
+                        I joined theScore in May 2024 as a QA Analyst for the Promotions Team, where I worked closely with developers to ensure the smooth rollout of new features. Using a Kanban board in Jira, I tracked tickets, collaborated in daily standup meetings, and helped maintain the quality of promotions across multiple platforms. I tested well over 100 tickets for theScore, ESPN Bet, and Hollywood Casino, making sure that the promotional features worked seamlessly across different environments as we rolled out multiple different features for our apps. Whether it was regression, functional, edge, smoke, or even production testing, I ensured reliability and high performance. One of my proudest achievements as a QA was my contribution to the company’s “Refer a Friend” feature. This was a project laboured over for a whole month, and during this time I was able to  identify and create tickets for over 50 bugs, ensuring to keep close communication with developers. We conducted bi-weely regression testing and I even had the opportunity to test our referral feature work on the company's production builds. We were able to launch this addition with no hiccups or issues, and my contribution led to the completion of a large milestone for the company and a feature adopted by thousands of users within the first few hours of its launch!
                         </p>
                     </blockquote>
                 </div>

@@ -4,7 +4,7 @@ import bgImage from "/assets/Webbackground2.png"; // Import the image
 export const About = () => {
     return (
         <section className='min-h-screen w-full flex flex-col relative bg-white' style={{ backgroundImage: `url(${bgImage})` }}>
-            <div className='hero_tag text-black'>
+            <div className='hero_tag text-black underline'>
             All About Me
             </div>
 

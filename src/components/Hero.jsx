@@ -1,8 +1,10 @@
 import React from 'react'
 import { Waver } from './Waver'
+import { Sphere } from './Sphere'
 import { Leva, useControls } from 'leva'
+import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import bgImage from "/assets/Webbackground1.png"; // Import the image
+import bgImage from "/assets/Webbackground3.png"; // Import the image
 
 
 
@@ -88,6 +90,11 @@ export const Hero = () => {
                             rotation={[7.9, 3.3, 2.1]}
                             scale={[5.9, 5.9, 5.9]}
                             position={[5.5, -4.7, 2.1]}
+                        />
+                        <Sphere count={2000} shape="sphere"
+                            scale={[5.9, 5.9, 5.9]}
+
+                        
                         />
                     </perspectiveCamera>
                 </Canvas>

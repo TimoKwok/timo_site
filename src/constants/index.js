@@ -63,7 +63,7 @@ export const myProjects = [
     {
         title: 'Task Master App',
         desc: 'During my work term at theScore, I set out to explore real-time application development using Elixir, PostgreSQL and the Phoenix web framework. I used the framework to deploy a “Task” schema, allowing user create, edit and delete tasks applying Ecto to manage database entries. As a challenge, I implemented a trash system where deleted tasks are moved to a separate page and automatically removed after 24 hours using an Oban worker. This required me to optimize database interactions, research atomic operations, and schedule the background jobs to handle asynchronous executions. Currently, I am expanding the real-time capabilities by adding a chat feature, and hope to implement LiveView in order to create a strong ans scalable real-time application.',
-        href: 'https://github.com/TimoKwok/Web-Dev-Version1',
+        href: 'https://github.com/TimoKwok/task_manager',
         logo: '/assets/project_logo3.png',
         image: '/assets/project_3_bg.png',
         tech: 'Phoenix, Elixir, Oban, PostgreSQL, Ecto',
@@ -88,7 +88,7 @@ export const myProjects = [
     {
         title: 'Unity Video Game',
         desc: 'As a long time goal, I tasked myself with developing an open world style video game using the Unity engine and C# scripts. Having no prior experience in game development, I followed online tutorials to implement 3D player movement, a 3D camera system, and interactive gameplay/dialogue mechanics. I programmed scripts to allow the player to smoothly jump, dance, sit, interact and roam about the open world without any lagging or drag. I was able to make use of my artistic side too, sculpting each 3D asset using Blender and adding custom VFX and particle effects for added immersion. This remains an incredibly fulfilling project that combined both my skills of software development and digital artistry.',
-        href: '',
+        href: 'https://github.com/TimoKwok/GameCode',
         logo: '/assets/unity.png',
         image: '',
         tech: 'Unity, Blender, C#',
@@ -115,7 +115,7 @@ export const myProjects = [
     {
         title: 'War Card Game Simulator',
         desc: 'An assignment from my second year comparative programming class required us to develop a series of programs to simulate a game of War when given a shuffled deck of cards. This needed to be completing in the languages of Elixir, Haskell, and Rust—languages in which an object oriented approach would not apply. I needed to quickly adapt to the world of pattern matching and tail recursion and immutability. I studied each language and as I tested along the way, I created a strong program able to run effificnely using tail recursion to reduce the load on the stack. My efforts resulted in a perfect score and deepend my understanding of functional programming, optimization, clean code architecture as well as how to learn and apply new languages quickly.',
-        href: '',
+        href: 'https://github.com/TimoKwok/War-Elixir',
         logo: '',
         image: '',
         tech: 'Elixir, Haskell, Rust',
@@ -136,7 +136,7 @@ export const myProjects = [
     {
         title: 'ATM System',
         desc: 'I collaborated with a team of five to develop a mock ATM system using Agile methodologies and SDLC approaches to creating software in my second year. Our goal was to design a well structured system by following professional practices and workflows. We applied a waterfall model approach and began by documenting UML diagrams, requirement analysis, use case scenarios, and test cases to map out the interactions between the actors and classes within our system. I was able to gain experience with iterative development and navigating team dynamics by resolving conflicts and communicating weekly with our members. This projects allowed me to view how professionals develop their software and how teams are meant to operate to produce high quality products.',
-        href: '',
+        href: 'https://github.com/TimoKwok/ATM-System',
         logo: '',
         image: '',
         tech: 'Java, Agile, SDLC, Waterfall',

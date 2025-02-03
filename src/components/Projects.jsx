@@ -29,7 +29,7 @@ export const Projects = () => {
 
     return (
         <section className="h-[105vh] w-full flex flex-col relative" style={{ backgroundImage: `url(${bgImage})` }}>
-            <div className='hero_tag text-white'>
+            <div className='hero_tag text-white underline'>
                 My Projects
             </div>
 
@@ -47,9 +47,11 @@ export const Projects = () => {
                                 className="ml-4 w-24 h-24 shadow-md rounded-lg"
                             />
                     </div>
-                    <div className='flex flex-col gap-5 text-white-600 my-1'>
+                    <div className='flex flex-col gap-5 text-white-600 my-1' style={{ position: 'relative', zIndex: 10 }}>
                     <h2 className=" text-3xl font-semibold mb-4">
-                        {currentProject.title}
+                        <button onClick={() => {window.open(currentProject.href, "_blank")}} className='hover:text-white transition-colors' alt="check it out!">
+                            {currentProject.title}
+                        </button>
                             <div className="flex mt-4 items-center gap-9">
                             {currentProject.tags.map((tech) => (
                                 <img 
