@@ -57,7 +57,7 @@ export function Sphere(props){
         />
       </bufferGeometry>
       <pointsMaterial 
-        size={0.09} 
+        size={0.04} 
         color="#eeabff" 
         sizeAttenuation 
         depthWrite={false} 
