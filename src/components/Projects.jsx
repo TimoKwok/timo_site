@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import { Avatar } from './Avatar'
-import { Laptop } from './Laptop'
-import { Leva, useControls } from 'leva'
+import { Laptop2 } from './Laptop2'
+import { Leva } from 'leva'
 import { Canvas } from "@react-three/fiber";
 import { myProjects } from '../constants';
+import bgImage from "/assets/Webbackground1.png"; // Import the image
+
 
 const projectCount = myProjects.length;
 
@@ -24,97 +26,16 @@ export const Projects = () => {
         })
     }
 
-    const x = useControls('Avatar', 
-        {
-            rotationX: {
-                value: 2.5,
-                min: -10,
-                max: 10
-            },
-            rotationY: {
-                value: 2.5,
-                min: -10,
-                max: 10
-            },
-            rotationZ: {
-                value: 2.5,
-                min: -10,
-                max: 10
-            },
-            scale: {
-                value: 0.1,
-                min: -10,
-                max: 10
-            },
-            positionX: {
-                value: 2.5,
-                min: -10,
-                max: 10
-            },
-            positionY: {
-                value: 2.5,
-                min: -10,
-                max: 10
-            },
-            positionZ: {
-                value: 2.5,
-                min: -10,
-                max: 10
-            },
-
-        })
-
-    const y = useControls('Laptop', 
-        {
-            rotationX: {
-                value: 2.5,
-                min: -10,
-                max: 10
-            },
-            rotationY: {
-                value: 2.5,
-                min: -10,
-                max: 10
-            },
-            rotationZ: {
-                value: 2.5,
-                min: -10,
-                max: 10
-            },
-            scale: {
-                value: 0.1,
-                min: -10,
-                max: 10
-            },
-            positionX: {
-                value: 2.5,
-                min: -10,
-                max: 10
-            },
-            positionY: {
-                value: 2.5,
-                min: -10,
-                max: 10
-            },
-            positionZ: {
-                value: 2.5,
-                min: -10,
-                max: 10
-            },
-
-        })
-
-
-
 
     return (
-        <section className="h-[90vh] w-full flex flex-col relative">
+        <section className="h-[105vh] w-full flex flex-col relative" style={{ backgroundImage: `url(${bgImage})` }}>
             <div className='hero_tag text-white'>
                 My Projects
             </div>
 
             {/* project logo + title + description */}
             <div className='flex flex-col sm:flex-row items-start justify-between gap-8 sm:gap-16'>
+
                 
                 
                 {/* title + description */}
@@ -129,7 +50,20 @@ export const Projects = () => {
                     <div className='flex flex-col gap-5 text-white-600 my-1'>
                     <h2 className=" text-3xl font-semibold mb-4">
                         {currentProject.title}
+                            <div className="flex mt-4 items-center gap-9">
+                            {currentProject.tags.map((tech) => (
+                                <img 
+                                    key={tech.id} 
+                                    src={tech.path} 
+                                    alt={tech.name} 
+                                    className="w-10 h-10 rounded"
+                                />
+                            ))}
+                        </div>
                     </h2>
+                    <p className="text-gray bold italic font-medium">
+                        Technology Used: {currentProject.tech}
+                    </p>
                     <p className=" text-lg text-gray-300 ">
                         {currentProject.desc}
                     </p>
@@ -161,14 +95,14 @@ export const Projects = () => {
                                 <ambientLight intensity={5} color={"#e6e8ff"}/>
                                 <directionalLight intensity={5} position={[-10,0,-2]} color={"#fff6d6"}/>
                                 <Avatar
-                                    rotation={[x.rotationX, x.rotationY, x.rotationZ]}
-                                    scale={[x.scale, x.scale, x.scale]}
-                                    position={[x.positionX, x.positionY, x.positionZ]}
+                                    rotation={[1.5, -3.3, 1.7]}
+                                    scale={[6.3, 6.3, 6.3]}
+                                    position={[8.3, -5.3, -2.9]}
                                 />
-                                <Laptop
-                                    rotation={[y.rotationX, y.rotationY, y.rotationZ]}
-                                    scale={[y.scale, y.scale, y.scale]}
-                                    position={[y.positionX, y.positionY, y.positionZ]}
+                                <Laptop2
+                                    rotation={[-2.9, 1.3, -3.5]}
+                                    scale={[4.3, 4.3, 4.3]}
+                                    position={[7.7, -10, -2.7]}
                                 />
                             </perspectiveCamera>
                         </Canvas>

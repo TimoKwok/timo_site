@@ -1,8 +1,9 @@
 import React from 'react'
+import bgImage from "/assets/Webbackground2.png"; // Import the image
 
 export const About = () => {
     return (
-        <section className='min-h-screen w-full flex flex-col relative bg-white'>
+        <section className='min-h-screen w-full flex flex-col relative bg-white' style={{ backgroundImage: `url(${bgImage})` }}>
             <div className='hero_tag text-black'>
             All About Me
             </div>

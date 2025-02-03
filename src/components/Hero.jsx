@@ -2,10 +2,14 @@ import React from 'react'
 import { Waver } from './Waver'
 import { Leva, useControls } from 'leva'
 import { Canvas } from "@react-three/fiber";
+import bgImage from "/assets/Webbackground1.png"; // Import the image
+
 
 
 export const Hero = () => {
 
+
+    /** 
     const x = useControls('Waver', 
         {
             rotationX: {
@@ -45,9 +49,10 @@ export const Hero = () => {
             },
 
         })
+       */ 
 
     return (
-        <section className="pt-20 min-h-screen w-full flex flex-col relative">
+        <section className="pt-20 min-h-screen w-full flex flex-col relative" style={{ backgroundImage: `url(${bgImage})` }}>
             <div className="w-full mx-auto flex flex-col">
                 <p className="animate-slidein text-2xl font-generalsans text-white font-medium text-center">
                 Let's Get To Know Each Other! You Can Call Me

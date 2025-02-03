@@ -12,47 +12,38 @@ import * as THREE from "three";
 
 export function Waver(props) {
   const group = useRef();
-  const { cursorFollow} = useControls({
-    cursorFollow: true,
-  });
-  const { scene } = useGLTF('models/man_test2.glb');
+  const { scene } = useGLTF("models/man_test2.glb");
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
   const { nodes, materials } = useGraph(clone);
-  const {animations: wavingAnimation} = useFBX("animations/Waving.fbx");  
-  
-  wavingAnimation[0].name = "Waving";
+  const { animations: wavingAnimation } = useFBX("animations/Waving.fbx");
 
+  wavingAnimation[0].name = "Waving";
   const { actions } = useAnimations(wavingAnimation, group);
 
   useFrame((state) => {
-    if (cursorFollow) {
-        const mouse = new THREE.Vector2(state.mouse.x, state.mouse.y);
-        
-        const raycaster = new THREE.Raycaster();
-        raycaster.setFromCamera(mouse, state.camera);
-
-        const target = raycaster.ray.origin.clone().add(raycaster.ray.direction.multiplyScalar(5));
-        group.current.getObjectByName("spine003").lookAt(target);
-    }
-});
-
+    const mouse = new THREE.Vector2(state.mouse.x, state.mouse.y);
+    const raycaster = new THREE.Raycaster();
+    raycaster.setFromCamera(mouse, state.camera);
+    const target = raycaster.ray.origin.clone().add(raycaster.ray.direction.multiplyScalar(5));
+    group.current.getObjectByName("spine003").lookAt(target);
+  });
 
   useEffect(() => {
-    actions["Waving"].reset().play()
+    actions["Waving"].reset().play();
   }, []);
-  
+
   return (
     <group {...props} ref={group} dispose={null}>
-        <primitive object={nodes.spine} />
-        <skinnedMesh geometry={nodes.Cube061.geometry} material={materials['Material.010']} skeleton={nodes.Cube061.skeleton} />
-        <skinnedMesh geometry={nodes.Cube061_1.geometry} material={materials['Material.013']} skeleton={nodes.Cube061_1.skeleton} />
-        <skinnedMesh geometry={nodes.Cube061_2.geometry} material={materials['Material.006']} skeleton={nodes.Cube061_2.skeleton} />
-        <skinnedMesh geometry={nodes.Cube061_3.geometry} material={materials['Material.009']} skeleton={nodes.Cube061_3.skeleton} />
-        <skinnedMesh geometry={nodes.Cube061_4.geometry} material={materials['Material.011']} skeleton={nodes.Cube061_4.skeleton} />
-        <skinnedMesh geometry={nodes.Cube061_5.geometry} material={materials['Material.012']} skeleton={nodes.Cube061_5.skeleton} />
-        <skinnedMesh geometry={nodes.Cube061_6.geometry} material={materials['Material.004']} skeleton={nodes.Cube061_6.skeleton} />
-      </group>
-  )
+      <primitive object={nodes.spine} />
+      <skinnedMesh geometry={nodes.Cube061.geometry} material={materials["Material.010"]} skeleton={nodes.Cube061.skeleton} />
+      <skinnedMesh geometry={nodes.Cube061_1.geometry} material={materials["Material.013"]} skeleton={nodes.Cube061_1.skeleton} />
+      <skinnedMesh geometry={nodes.Cube061_2.geometry} material={materials["Material.006"]} skeleton={nodes.Cube061_2.skeleton} />
+      <skinnedMesh geometry={nodes.Cube061_3.geometry} material={materials["Material.009"]} skeleton={nodes.Cube061_3.skeleton} />
+      <skinnedMesh geometry={nodes.Cube061_4.geometry} material={materials["Material.011"]} skeleton={nodes.Cube061_4.skeleton} />
+      <skinnedMesh geometry={nodes.Cube061_5.geometry} material={materials["Material.012"]} skeleton={nodes.Cube061_5.skeleton} />
+      <skinnedMesh geometry={nodes.Cube061_6.geometry} material={materials["Material.004"]} skeleton={nodes.Cube061_6.skeleton} />
+    </group>
+  );
 }
 
-useGLTF.preload('models/man_test2.glb')
+useGLTF.preload("models/man_test2.glb");
