@@ -1,10 +1,5 @@
 # r3f-vite-starter
-A boilerplate to build R3F projects
+Current build of the site is being hosted on Netlify!
 
-```
-yarn
-yarn dev
-```
+Check it out: https://timo-kwok.netlify.app/
 
-
-![image](https://user-images.githubusercontent.com/6551176/221732091-23ee52cb-4150-42fa-b998-43628d7a6b0d.png)
