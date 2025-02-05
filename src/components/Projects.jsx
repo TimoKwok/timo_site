@@ -94,8 +94,8 @@ export const Projects = () => {
                     <Leva/>
                         <Canvas className='w-full h-full'>
                             <perspectiveCamera position={[0,0,-4]} aspect={window.innerWidth / window.innerHeight}  near={0.1} far={1000}>
-                                <ambientLight intensity={5} color={"#e6e8ff"}/>
-                                <directionalLight intensity={5} position={[-10,0,-2]} color={"#fff6d6"}/>
+                                <ambientLight intensity={5} color={"#ffecd9"}/>
+                                <directionalLight intensity={8} position={[-10,8,-2]} color={"#fccafc"}/>
                                 <Avatar
                                     rotation={[1.5, -3.3, 1.7]}
                                     scale={[6.3, 6.3, 6.3]}

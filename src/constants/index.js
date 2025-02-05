@@ -90,7 +90,7 @@ export const myProjects = [
         desc: 'As a long time goal, I tasked myself with developing an open world style video game using the Unity engine and C# scripts. Having no prior experience in game development, I followed online tutorials to implement 3D player movement, a 3D camera system, and interactive gameplay/dialogue mechanics. I programmed scripts to allow the player to smoothly jump, dance, sit, interact and roam about the open world without any lagging or drag. I was able to make use of my artistic side too, sculpting each 3D asset using Blender and adding custom VFX and particle effects for added immersion. This remains an incredibly fulfilling project that combined both my skills of software development and digital artistry.',
         href: 'https://github.com/TimoKwok/GameCode',
         logo: '/assets/unity.png',
-        image: '',
+        image: '/assets/project_4_bg.png',
         tech: 'Unity, Blender, C#',
         tags: [
             {
@@ -116,8 +116,8 @@ export const myProjects = [
         title: 'War Card Game Simulator',
         desc: 'An assignment from my second year comparative programming class required us to develop a series of programs to simulate a game of War when given a shuffled deck of cards. This needed to be completing in the languages of Elixir, Haskell, and Rust—languages in which an object oriented approach would not apply. I needed to quickly adapt to the world of pattern matching and tail recursion and immutability. I studied each language and as I tested along the way, I created a strong program able to run effificnely using tail recursion to reduce the load on the stack. My efforts resulted in a perfect score and deepend my understanding of functional programming, optimization, clean code architecture as well as how to learn and apply new languages quickly.',
         href: 'https://github.com/TimoKwok/War-Elixir',
-        logo: '',
-        image: '',
+        logo: '/assets/card_logo.png',
+        image: '/assets/project_5_bg.png',
         tech: 'Elixir, Haskell, Rust',
         tags: [
             {
